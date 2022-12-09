@@ -1,12 +1,14 @@
 <script>
 	import Header from '$lib/components/Header.svelte';
 	import Main from '$lib/components/Main.svelte';
+	import Sidebar from '$lib/components/Sidebar.svelte';
 	import Timeline from '$lib/components/Timeline.svelte';
 </script>
 
 <Header />
 <Main>
 	<Timeline />
+	<Sidebar />
 </Main>
 
 <style>

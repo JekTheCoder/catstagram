@@ -1,0 +1,10 @@
+.label {
+	display: flex;
+	column-gap: 1rem;
+}
+
+.label>.avatar>img {
+	border-radius: 50%;
+	aspect-ratio: 1;
+	height: 5rem;
+}
