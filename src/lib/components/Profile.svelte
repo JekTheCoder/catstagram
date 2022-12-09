@@ -1,5 +1,7 @@
-<script>
+<script lang="ts">
+	import type { User } from '$lib/models/user';
 	import '$lib/styles/profile-label.css';
+	export let profile: User;
 </script>
 
 <div class="label">
@@ -10,7 +12,7 @@
 		/>
 	</div>
 	<div class="info">
-		<h2 class="primary">A Cat</h2>
-		<span class="secondary">Lucky cat</span>
+		<h2 class="primary">{profile.nickname}</h2>
+		<span class="secondary">{profile.name}</span>
 	</div>
 </div>

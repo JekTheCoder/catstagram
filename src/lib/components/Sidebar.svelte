@@ -1,10 +1,15 @@
 <script>
+	import { profile } from '$lib/store/profile';
 	import Profile from './Profile.svelte';
 	import Stories from './Stories.svelte';
+
+	let _profile = $profile;
 </script>
 
 <aside class="card">
-	<Profile />
+	{#if _profile}
+		<Profile profile={_profile}/>
+	{/if}
 	<Stories />
 </aside>
 

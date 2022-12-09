@@ -1,8 +1,18 @@
-<script>
+<script lang="ts">
 	import Header from '$lib/components/Header.svelte';
 	import Main from '$lib/components/Main.svelte';
 	import Sidebar from '$lib/components/Sidebar.svelte';
 	import Timeline from '$lib/components/Timeline.svelte';
+	import type { AppData } from '$lib/models/app-data';
+	import { posts } from '$lib/store/posts';
+	import { profile } from '$lib/store/profile';
+
+	fetch('https://kittygram-api.vercel.app/')
+		.then((data) => data.json())
+		.then(({ posts: _posts, user }: AppData) => {
+			posts.set(_posts);
+			profile.set(user);
+		});
 </script>
 
 <Header />
