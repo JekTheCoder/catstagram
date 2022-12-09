@@ -11,7 +11,7 @@
 
 <style>
 	:global(:root) {
-		--color-primary: 0, 0, 0;
+		--color-primary: 250, 80, 100;
 		--color-accent: 0, 0, 0;
 		--color-warn: 255, 20, 20;
 		--color-bg: 250, 250, 250;
