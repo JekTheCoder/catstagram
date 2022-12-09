@@ -4,12 +4,12 @@
 
 <style>
 	main {
-		max-width: 120rem;
+		max-width: 80rem;
 		margin: auto;
-		padding: 0 2rem;
+		padding: 1rem 2rem;
 
 		display: grid;
-		grid-template-columns: minmax(0, 100%) 1fr;
+		grid-template-columns: minmax(0, 60rem) 1fr;
 		column-gap: 2rem;
 	}
 </style>

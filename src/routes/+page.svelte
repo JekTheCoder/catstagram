@@ -12,9 +12,11 @@
 </Main>
 
 <style>
+	@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap');
+
 	:global(:root) {
-		--color-primary: 250, 80, 100;
-		--color-accent: 0, 0, 0;
+		--color-primary: 200 50 200;
+		--color-accent: 242, 162, 24;
 		--color-warn: 255, 20, 20;
 		--color-bg: 250, 250, 250;
 		--color-bg-accent: 255, 255, 255;
@@ -24,6 +26,8 @@
 
 	:global(body) {
 		background-color: rgb(var(--color-bg));
+		color: rgb(var(--color-text));
+		font-family: 'Lato', sans-serif;
 	}
 
 	:global(*) {

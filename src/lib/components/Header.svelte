@@ -11,11 +11,22 @@
 </header>
 
 <style>
+	@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+	h1 {
+		font-family: 'Pacifico';
+		background: linear-gradient(rgb(var(--color-accent)), rgb(var(--color-primary)));
+		background-clip: text;
+		-webkit-text-fill-color: transparent;
+	}
+
 	header {
-		background-color: rgb(var(--color-primary));
+		background-color: rgb(var(--color-bg-accent));
 		padding: 0.5rem;
 		display: flex;
 		justify-content: space-between;
+
+		box-shadow: 0 0 10px -5px rgba(var(--color-text), 0.63);
 	}
 
 	ul {
