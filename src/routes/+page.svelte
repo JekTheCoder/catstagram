@@ -17,6 +17,9 @@
 		--color-accent: 0, 0, 0;
 		--color-warn: 255, 20, 20;
 		--color-bg: 250, 250, 250;
+		--color-bg-accent: 255, 255, 255;
+		--color-text: 0, 0, 0;
+		--color-bg-secondary: 235, 235, 235;
 	}
 
 	:global(body) {
