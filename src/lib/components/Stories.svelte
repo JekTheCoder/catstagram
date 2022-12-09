@@ -12,11 +12,11 @@
 			<div class="avatar">
 				<img src="https://www.humanesociety.org/sites/default/files/styles/1240x698/public/2020-07/kitten-510651.jpg?h=f54c7448&itok=ZhplzyJ9" alt="">
 			</div>
-			<div class="">
-				<h2>
+			<div class="info">
+				<h2 class="primary">
 					A second cat
 				</h2>
-				<span>Since 4 hours ago</span>
+				<span class="secondary">Since 4 hours ago</span>
 			</div>
 		</li>
 	</ul>
@@ -30,5 +30,10 @@
 	header {
 		display: flex;
 		justify-content: space-between;
+		margin-bottom: .3rem;
+	}
+
+	.stories {
+		display: inline-block;
 	}
 </style>

@@ -13,8 +13,8 @@
 				/>
 			</div>
 			<div class="info">
-				<h3>Elmo.pug</h3>
-				<span>Bogota colombia</span>
+				<h2 class="primary">Elmo.pug</h2>
+				<span class="secondary">Bogota colombia</span>
 			</div>
 		</div>
 		<i class="fas fa-ellipsis-h" />

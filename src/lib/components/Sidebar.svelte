@@ -3,7 +3,7 @@
 	import Stories from './Stories.svelte';
 </script>
 
-<aside>
+<aside class="card">
 	<Profile />
 	<Stories />
 </aside>
@@ -11,9 +11,8 @@
 <style>
 	aside {
 		padding: 1rem;
-		border-radius: 2rem;
-		border-color: black;
-		border-width: 2px;
-		border-style: solid;
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
 	}
 </style>

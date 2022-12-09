@@ -16,3 +16,14 @@
 	position: relative;
 	height: 100%;
 }
+
+.label>.info>.primary {
+	font-size: 18px;
+	color: rgb(var(--color-text));
+	line-height: 70%;
+}
+
+.label>.info>.secondary {
+	font-size: 14px;
+	color: rgb(var(--color-text));
+}

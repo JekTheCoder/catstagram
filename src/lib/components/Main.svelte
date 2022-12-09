@@ -9,7 +9,7 @@
 		padding: 1rem 2rem;
 
 		display: grid;
-		grid-template-columns: minmax(0, 60rem) 1fr;
-		column-gap: 2rem;
+		grid-template-columns: minmax(0, 60rem) minmax(15em, 1fr);
+		column-gap: 1rem;
 	}
 </style>

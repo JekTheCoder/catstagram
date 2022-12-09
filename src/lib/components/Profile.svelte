@@ -10,7 +10,7 @@
 		/>
 	</div>
 	<div class="info">
-		<h2>A Cat</h2>
-		<span>Lucky cat</span>
+		<h2 class="primary">A Cat</h2>
+		<span class="secondary">Lucky cat</span>
 	</div>
 </div>
