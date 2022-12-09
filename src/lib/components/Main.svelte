@@ -10,6 +10,7 @@
 
 		display: grid;
 		grid-template-columns: minmax(0, 60rem) minmax(15em, 1fr);
+		align-items: flex-start;
 		column-gap: 1rem;
 	}
 </style>
