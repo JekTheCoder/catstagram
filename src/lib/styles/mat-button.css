@@ -1,0 +1,32 @@
+.mat-button {
+	background: transparent;
+	border: none;
+	padding: 0.4rem;
+	transition: background-color 200ms ease-in;
+	border-radius: 0.8rem;
+}
+
+.mat-button:active {
+	background-color: rgba(40, 40, 40, 0.1);
+}
+
+.mat-button.accent:active {
+	background-color: rgb(var(--color-accent), 0.2);
+}
+
+.mat-button.primary {
+	color: rgb(var(--color-primary));
+}
+
+.mat-button.primary:active {
+	background-color: rgb(var(--color-primary), 0.2);
+}
+
+.mat-button.accent {
+	color: rgb(var(--color-accent));
+}
+
+/* Adapt Awesome icon for buttons */
+.mat-button > i.fas {
+	font-size: 16px;
+}

@@ -13,7 +13,7 @@
 	</div>
 	<footer>
 		<input type="text" placeholder="Something awesome"/>
-		<button>Post!</button>
+		<button class="mat-button accent">Post!</button>
 	</footer>
 </section>
 
@@ -48,18 +48,5 @@
 		display: grid;
 		grid-template-columns: 1fr min-content;
 		gap: 1rem;
-	}
-
-	footer>button {
-		background: transparent;
-		border: none;
-		color: rgb(var(--color-accent));
-		padding: .2rem .5rem;
-		transition: background-color 200ms ease-in;
-		border-radius: .8rem;
-	}
-
-	footer>button:active {
-	background-color: rgb(var(--color-accent), .2);
 	}
 </style>

@@ -1,5 +1,6 @@
 <script lang="ts">
 	import '$lib/styles/card.css';
+	import '$lib/styles/mat-button.css';
 	import type { Post } from '$lib/models/post';
 	import Comments from './Comments.svelte';
 
@@ -17,18 +18,26 @@
 				<span class="secondary">{post.location}</span>
 			</div>
 		</div>
-		<i class="fas fa-ellipsis-h" />
+		<button class="mat-button">
+			<i class="fas fa-ellipsis-h" />
+		</button>
 	</header>
 	<figure>
 		<img src={post.photo} alt={post.username} />
 	</figure>
 	<div class="icons">
 		<div class="">
-			<i class="fas fa-heart" class:red={post.like} />
-			<i class="fas fa-paper-plane" />
+			<button class="mat-button">
+				<i class="fas fa-heart" class:red={post.like} />
+			</button>
+			<button class="mat-button">
+				<i class="fas fa-paper-plane" />
+			</button>
 		</div>
 
-		<i class="fas fa-bookmark" />
+		<button class="mat-button">
+			<i class="fas fa-bookmark" />
+		</button>
 	</div>
 	<section class="description">
 		<p>{post.postComment}</p>
@@ -57,7 +66,7 @@
 	.icons {
 		display: flex;
 		justify-content: space-between;
-		padding: 0.2rem 0.5rem;
+		padding: 0 0.5rem;
 	}
 
 	.icons > div:first {
