@@ -37,6 +37,7 @@
 		--color-bg: 250, 250, 250;
 		--color-bg-accent: 255, 255, 255;
 		--color-text: 0, 0, 0;
+		--color-text-secondary: 80, 80, 80;
 		--color-bg-secondary: 185, 185, 185;
 	}
 
@@ -50,5 +51,9 @@
 		padding: 0;
 		margin: 0;
 		box-sizing: border-box;
+	}
+
+	:global(p, span, .text-secondary) {
+		color: rgb(var(--color-text-secondary));
 	}
 </style>
