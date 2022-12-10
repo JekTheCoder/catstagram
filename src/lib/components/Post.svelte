@@ -5,6 +5,7 @@
 	import Comments from './Comments.svelte';
 
 	export let post: Post;
+	export let onShare: (post: Post) => void;
 </script>
 
 <article class="card">
@@ -30,7 +31,7 @@
 			<button class="mat-button">
 				<i class="fas fa-heart" class:red={post.like} />
 			</button>
-			<button class="mat-button">
+			<button class="mat-button" on:click={() => onShare(post)}>
 				<i class="fas fa-paper-plane" />
 			</button>
 		</div>

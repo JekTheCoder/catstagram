@@ -39,6 +39,7 @@
 		--color-text: 0, 0, 0;
 		--color-text-secondary: 80, 80, 80;
 		--color-bg-secondary: 185, 185, 185;
+		--color-bg-contrary: 0, 0, 0;
 	}
 
 	:global(body) {
