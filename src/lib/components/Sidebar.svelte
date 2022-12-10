@@ -2,13 +2,11 @@
 	import { profile } from '$lib/store/profile';
 	import Profile from './Profile.svelte';
 	import Stories from './Stories.svelte';
-
-	let _profile = $profile;
 </script>
 
 <aside class="card">
-	{#if _profile}
-		<Profile profile={_profile}/>
+	{#if $profile}
+		<Profile profile={$profile}/>
 	{/if}
 	<Stories />
 </aside>

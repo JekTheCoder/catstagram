@@ -1,6 +1,9 @@
-<script>
+<script lang="ts">
 	import '$lib/styles/card.css';
+	import type { Post } from '$lib/models/post';
 	import Comments from './Comments.svelte';
+
+	export let post: Post;
 </script>
 
 <article class="card">
@@ -8,20 +11,20 @@
 		<div class="label">
 			<div class="avatar">
 				<img
-					src="https://www.humanesociety.org/sites/default/files/styles/1240x698/public/2020-07/kitten-510651.jpg?h=f54c7448&itok=ZhplzyJ9"
+					src={post.avatar}
 					alt=""
 				/>
 			</div>
 			<div class="info">
-				<h2 class="primary">Elmo.pug</h2>
-				<span class="secondary">Bogota colombia</span>
+				<h2 class="primary">{post.username}</h2>
+				<span class="secondary">{post.location}</span>
 			</div>
 		</div>
 		<i class="fas fa-ellipsis-h" />
 	</header>
 	<figure>
 		<img
-			src="https://www.humanesociety.org/sites/default/files/styles/1240x698/public/2020-07/kitten-510651.jpg?h=f54c7448&itok=ZhplzyJ9"
+			src={post.photo}
 			alt=""
 		/>
 	</figure>
@@ -34,7 +37,7 @@
 		<i class="fas fa-bookmark" />
 	</div>
 	<section class="description">
-		Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, dolorum.
+		<p>{post.postComment}</p>
 	</section>
 	<div class="border-top">
 		<Comments />
