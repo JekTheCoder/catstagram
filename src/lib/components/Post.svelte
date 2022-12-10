@@ -33,9 +33,7 @@
 	<section class="description">
 		<p>{post.postComment}</p>
 	</section>
-	<div class="border-top">
-		<Comments />
-	</div>
+	<Comments comments={post.comments} />
 </article>
 
 <style>
@@ -43,10 +41,6 @@
 		background: linear-gradient(rgb(var(--color-accent)), rgb(var(--color-primary)));
 		background-clip: text;
 		-webkit-text-fill-color: transparent;
-	}
-
-	.border-top {
-		border-top: 1px solid rgb(var(--color-bg-secondary));
 	}
 
 	header {
