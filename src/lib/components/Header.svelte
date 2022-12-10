@@ -1,9 +1,16 @@
+<script lang="ts">
+	import { likeCount } from '$lib/store/like-count';
+</script>
+
 <header>
 	<h1>Catstagram</h1>
 	<nav>
 		<ul>
 			<li>
 				<i class="fas fa-heart" />
+				{#if $likeCount}
+					<span>{$likeCount}</span>
+				{/if}
 			</li>
 			<li><i class="fas fa-user" /></li>
 		</ul>

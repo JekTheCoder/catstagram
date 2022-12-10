@@ -3,9 +3,23 @@
 	import '$lib/styles/mat-button.css';
 	import type { Post } from '$lib/models/post';
 	import Comments from './Comments.svelte';
+	import { likeCount } from '$lib/store/like-count';
 
 	export let post: Post;
+	let marked = false;
+
 	export let onShare: (post: Post) => void;
+
+	function toogleLike() {
+		post.like = !post.like;
+		let { like } = post;
+		let sum = Number(like) - (Number(!like));
+		likeCount.update(likes => likes + sum);
+	}
+
+	function toggleMarked() {
+		marked = !marked;
+	}
 </script>
 
 <article class="card">
@@ -23,12 +37,12 @@
 			<i class="fas fa-ellipsis-h" />
 		</button>
 	</header>
-	<figure>
+	<figure on:dblclick={toogleLike}>
 		<img src={post.photo} alt={post.username} />
 	</figure>
 	<div class="icons">
 		<div class="">
-			<button class="mat-button">
+			<button class="mat-button" on:click={toogleLike}>
 				<i class="fas fa-heart" class:red={post.like} />
 			</button>
 			<button class="mat-button" on:click={() => onShare(post)}>
@@ -36,8 +50,8 @@
 			</button>
 		</div>
 
-		<button class="mat-button">
-			<i class="fas fa-bookmark" />
+		<button class="mat-button" on:click={toggleMarked}>
+			<i class="fas fa-bookmark" class:marked />
 		</button>
 	</div>
 	<section class="description">
@@ -77,5 +91,9 @@
 
 	section {
 		padding: 0 0.5rem;
+	}
+
+	.marked {
+		color: rgb(var(--color-text-secondary));
 	}
 </style>
