@@ -8,14 +8,13 @@
 	import { profile } from '$lib/store/profile';
 	import { onMount } from 'svelte';
 
+	/** @type {import('./$types').PageData} */
+	export let data: AppData;
+
 	onMount(() => {
-		fetch('https://kittygram-api.vercel.app/')
-		.then((data) => data.json())
-		.then(({ posts: _posts, user }: AppData) => {
-			posts.set(_posts);
-			profile.set(user);
-		});
-	})
+		posts.set(data.posts);
+		profile.set(data.user);
+	});
 </script>
 
 <Header />
