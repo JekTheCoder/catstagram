@@ -19,8 +19,8 @@
 
 <Header />
 <Main>
-	<Timeline />
-	<Sidebar />
+	<Timeline slot="center" />
+	<Sidebar slot="right" />
 </Main>
 
 <style>

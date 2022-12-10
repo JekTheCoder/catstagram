@@ -25,8 +25,13 @@
 		padding: 0.5rem;
 		display: flex;
 		justify-content: space-between;
+		align-items: center;
 
 		box-shadow: 0 0 10px -5px rgba(var(--color-text), 0.63);
+	}
+
+	nav {
+		padding: 0 1rem;
 	}
 
 	ul {
