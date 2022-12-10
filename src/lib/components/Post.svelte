@@ -10,10 +10,7 @@
 	<header>
 		<div class="label">
 			<div class="avatar">
-				<img
-					src={post.avatar}
-					alt=""
-				/>
+				<img src={post.avatar} alt={post.username} />
 			</div>
 			<div class="info">
 				<h2 class="primary">{post.username}</h2>
@@ -23,14 +20,11 @@
 		<i class="fas fa-ellipsis-h" />
 	</header>
 	<figure>
-		<img
-			src={post.photo}
-			alt=""
-		/>
+		<img src={post.photo} alt={post.username} />
 	</figure>
 	<div class="icons">
 		<div class="">
-			<i class="fas fa-heart" />
+			<i class="fas fa-heart" class:red={post.like} />
 			<i class="fas fa-paper-plane" />
 		</div>
 
@@ -45,6 +39,12 @@
 </article>
 
 <style>
+	.red {
+		background: linear-gradient(rgb(var(--color-accent)), rgb(var(--color-primary)));
+		background-clip: text;
+		-webkit-text-fill-color: transparent;
+	}
+
 	.border-top {
 		border-top: 1px solid rgb(var(--color-bg-secondary));
 	}

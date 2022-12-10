@@ -26,6 +26,10 @@
 <style>
 	@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap');
 
+	:global(i.fas) {
+		color: rgb(var(--color-bg-secondary));
+	}
+
 	:global(:root) {
 		--color-primary: 200 50 200;
 		--color-accent: 242, 162, 24;
@@ -33,7 +37,7 @@
 		--color-bg: 250, 250, 250;
 		--color-bg-accent: 255, 255, 255;
 		--color-text: 0, 0, 0;
-		--color-bg-secondary: 235, 235, 235;
+		--color-bg-secondary: 185, 185, 185;
 	}
 
 	:global(body) {
