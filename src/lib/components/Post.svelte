@@ -13,7 +13,7 @@
 	function toogleLike() {
 		post.like = !post.like;
 		let { like } = post;
-		let sum = Number(like) - (Number(!like));
+		let sum = Number(like) - Number(!like);
 		likeCount.update(likes => likes + sum);
 	}
 
@@ -61,10 +61,30 @@
 </article>
 
 <style>
+	@keyframes bouncing {
+		0%, 100%, 30%, 60% {
+			transform: translateY(0);
+		}
+
+		15% {
+			transform: translateY(-25px);
+		}
+
+		45% {
+			transform: translateY(-15px);
+		}
+
+		75% {
+			transform: translateY(-5px);
+		}
+	}
+
 	.red {
 		background: linear-gradient(rgb(var(--color-accent)), rgb(var(--color-primary)));
 		background-clip: text;
 		-webkit-text-fill-color: transparent;
+
+		animation: bouncing .8s linear;
 	}
 
 	header {
